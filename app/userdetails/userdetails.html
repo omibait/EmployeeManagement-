@@ -1,0 +1,21 @@
+<script src="userdetails_controller.js"></script>
+
+<div class=bgofuserdetails>
+<h1>Your Details</h1>
+<div class="details_content" ng-controller="user">
+    <table>
+        <tr>
+            <td rowspan="6" align="center"><img id=profile src="{{img}}" alt=""></td>
+            <td><h2>Hello!! {{fname}} {{lname}}</h2></td>
+           
+        </tr>
+        <tr>
+            <td colspan="2"><h4> Role :{{empDept}}</h4></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <input type="button" value="Logout" ng-click="logout()"></input></td>
+        </tr>
+            
+    </table>
+</div>
+</div>

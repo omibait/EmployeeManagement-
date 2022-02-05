@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>dummy</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.0/angular-route.min.js"></script>
+        <script src="dummy.js"></script>
+    </head>
+    <body ng-app="hello">
+        <div ng-controller="hello_c">
+            <h1>{{data2}}</h1>
+            <input type="text" ng-model="data2"></input>
+            <input type="button" value="click me!!" ng-click="click()" ></input>
+            <input type="text" ng-model="url"></input>
+            <input type="button" value="Enter!!" ng-click="enter()" ></input>
+        </div>
+    </body>
+</html>

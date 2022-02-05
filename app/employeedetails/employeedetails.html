@@ -1,0 +1,32 @@
+<script src="employeedetails_controller.js"></script>
+
+<div class=bgofdet>
+<h1>Employee Details</h1>
+<div class="details_content" ng-controller="detailsController">
+    <table >
+        <tr>
+            <td><h2>{{fname}} {{lname}}</h2></td>
+            <td rowspan="6" align="center"><img id=profile src="{{img}}" alt=""></td>
+        </tr>
+        <tr>
+            <td><h3>Personal Deatils:-</h3></td>
+        </tr>
+        <tr>
+            <td>Email : {{empEmail}}</td>
+        </tr>
+        <tr>
+            <td>Phone : {{empPhone}}</td>
+        </tr>
+        <tr>
+            <td>Gender : {{empGender}}</td>
+        </tr>       
+        <tr>
+            <td colspan="2"><h4> Department :{{empDept}}</h4></td>
+        <tr>
+        <tr>
+            <td colspan="2"><h3>Project Related Deatils:-</h3></td>
+        </tr>
+    </table>
+
+</div>
+</div>

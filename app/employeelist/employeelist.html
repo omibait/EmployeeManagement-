@@ -1,0 +1,46 @@
+<script src="employeelist_controller.js"></script>
+
+<h1>Employee List</h1>
+<div ng-controller="listController">
+    <table cellspacing="5" class="content-table" align="center">
+        <tr>
+            <td colspan=2 align="center"><b>Sort Data :</b> 
+                <select ng-model="sortCol" >
+                    <option value="id" ng-click="sort(sortCol)">ID Asc</option>
+                    <option value="-id" ng-click="sort(sortCol)">ID Dsc</option>
+                    <option value="firstname" ng-click="sort(sortCol)">Name Asc</option>
+                    <option value="-firstname" ng-click="sort(sortCol)">Name Dsc</option>
+                    <option value="department" ng-click="sort(sortCol)">Department Asc</option>                
+                </select>
+                <!-- <input type="button" value="sort" ng-click="sort(sortCol)"></input> -->
+            </td>
+            <td></td>
+            <td colspan="2"  align="center">
+                <b>Search Employee : </b>
+                <input type="search" ng-model='searchedname'></input>
+                <!-- <input type="button" ng-click="search()" value="search"></input> -->
+            </td>
+        </tr>
+    </table>
+    <table cellspacing="5" class="content-table" align="center">
+        <thead>
+            <tr>
+              <td>ID</td>
+              <td>Name</td>
+              <td>Email</td>
+              <td>Department</td>
+              <!--<td>More Information</td>-->
+            </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat = "names in data | filter: searchedname">  <!--| filter: searchedname -->
+    
+            <td data-id="{{names.email}}" ng-click="detail($event)"> {{names.id}} </td>
+            <td data-id="{{names.email}}" ng-click="detail($event)"> {{names.firstname}} {{names.lastname}} </td>
+            <td data-id="{{names.email}}" ng-click="detail($event)"> {{names.email}} </td>
+            <td data-id="{{names.email}}" ng-click="detail($event)"> {{names.department}} </td>
+            <!--<td ><input type="submit" data-id="{{names.ID}}" value="More" ng-click="detail($event)"></input></td>-->
+        </tr> 
+        </tbody>
+    </table>
+</div>

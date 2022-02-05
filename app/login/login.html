@@ -1,0 +1,28 @@
+<!--<h1 align="center">Employee Management</h1>-->
+<script src="app/login/login_controller.js"></script>
+
+<div class=bgoflog>
+<div class=loginbox ng-controller="loginController">
+   
+	<form action="/" id=mylogin">
+		<div>
+		<!--<div style="background-color: rgb(0, 43, 136);">-->
+			<img class="img1" src="emorg\..\assests\image\p.png"></img>
+		</div>
+
+		<div class="input-group">
+			<input type="email" id="email" ng-model="email" placeholder="Email" required >
+		</div>
+
+		<div class="input-group">			
+			<input type="password" id="password" ng-model="password" placeholder="Password" required>
+		</div>
+
+		<div class="input-group">
+			<button type="button" class="btn" ng-click="submit()">Login</button>
+		</div>
+
+	</form>
+
+</div>
+</div>
